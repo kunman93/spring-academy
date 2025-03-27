@@ -1,0 +1,15 @@
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/main/java/rewards/RewardConfirmation.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/main/java/rewards/internal/restaurant/Restaurant.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/main/java/rewards/internal/account/Account.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/main/java/rewards/internal/RewardNetworkImpl.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/main/java/rewards/internal/restaurant/RestaurantRepository.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/main/java/rewards/Dining.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/main/java/rewards/internal/reward/JdbcRewardRepository.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/main/java/rewards/AccountContribution.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/main/java/config/RewardsConfig.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/main/java/rewards/internal/account/AccountRepository.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/main/java/rewards/internal/account/JdbcAccountRepository.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/main/java/rewards/internal/restaurant/JdbcRestaurantRepository.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/main/java/rewards/internal/account/Beneficiary.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/main/java/rewards/internal/reward/RewardRepository.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/main/java/rewards/RewardNetwork.java

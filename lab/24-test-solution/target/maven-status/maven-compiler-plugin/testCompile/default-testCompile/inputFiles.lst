@@ -1,0 +1,17 @@
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/test/java/rewards/SimpleJndiHelper.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/test/java/rewards/internal/StubRewardRepository.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/test/java/rewards/internal/StubRestaurantRepository.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/test/java/rewards/TestInfrastructureLocalConfig.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/test/java/rewards/internal/account/JdbcAccountRepositoryTests.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/test/java/rewards/ProductionRewardNetworkTests.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/test/java/rewards/TestInfrastructureConfig.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/test/java/rewards/TestInfrastructureJndiConfig.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/test/java/rewards/LoggingBeanPostProcessor.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/test/java/rewards/internal/StubAccountRepository.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/test/java/rewards/DevRewardNetworkTests.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/test/java/rewards/internal/reward/JdbcRewardRepositoryTests.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/test/java/rewards/internal/account/AccountTests.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/test/java/rewards/StubRewardNetworkTests.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/test/java/rewards/internal/RewardNetworkImplTests.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/test/java/rewards/RewardNetworkTests.java
+/home/noji/Repository/spring-academy/lab/24-test-solution/src/test/java/rewards/internal/restaurant/JdbcRestaurantRepositoryTests.java

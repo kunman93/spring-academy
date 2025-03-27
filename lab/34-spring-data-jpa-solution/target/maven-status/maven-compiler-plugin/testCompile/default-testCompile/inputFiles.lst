@@ -1,0 +1,8 @@
+/home/noji/Repository/spring-academy/lab/34-spring-data-jpa-solution/src/test/java/rewards/internal/restaurant/RestaurantTests.java
+/home/noji/Repository/spring-academy/lab/34-spring-data-jpa-solution/src/test/java/rewards/internal/StubRewardRepository.java
+/home/noji/Repository/spring-academy/lab/34-spring-data-jpa-solution/src/test/java/rewards/internal/RewardNetworkImplTests.java
+/home/noji/Repository/spring-academy/lab/34-spring-data-jpa-solution/src/test/java/rewards/internal/StubAccountRepository.java
+/home/noji/Repository/spring-academy/lab/34-spring-data-jpa-solution/src/test/java/rewards/RewardNetworkTests.java
+/home/noji/Repository/spring-academy/lab/34-spring-data-jpa-solution/src/test/java/rewards/internal/reward/JdbcRewardRepositoryTests.java
+/home/noji/Repository/spring-academy/lab/34-spring-data-jpa-solution/src/test/java/rewards/internal/account/AccountTests.java
+/home/noji/Repository/spring-academy/lab/34-spring-data-jpa-solution/src/test/java/rewards/internal/StubRestaurantRepository.java

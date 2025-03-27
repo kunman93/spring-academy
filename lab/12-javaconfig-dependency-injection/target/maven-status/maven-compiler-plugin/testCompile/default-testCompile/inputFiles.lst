@@ -1,0 +1,6 @@
+/home/noji/Repository/spring-academy/lab/12-javaconfig-dependency-injection/src/test/java/rewards/TestInfrastructureConfig.java
+/home/noji/Repository/spring-academy/lab/12-javaconfig-dependency-injection/src/test/java/rewards/internal/StubRewardRepository.java
+/home/noji/Repository/spring-academy/lab/12-javaconfig-dependency-injection/src/test/java/rewards/internal/StubRestaurantRepository.java
+/home/noji/Repository/spring-academy/lab/12-javaconfig-dependency-injection/src/test/java/rewards/internal/RewardNetworkImplTests.java
+/home/noji/Repository/spring-academy/lab/12-javaconfig-dependency-injection/src/test/java/rewards/internal/StubAccountRepository.java
+/home/noji/Repository/spring-academy/lab/12-javaconfig-dependency-injection/src/test/java/config/RewardsConfigTests.java

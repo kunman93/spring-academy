@@ -1,0 +1,5 @@
+/home/noji/Repository/spring-academy/lab/42-security-rest-solution/src/test/java/accounts/web/AccountControllerTests.java
+/home/noji/Repository/spring-academy/lab/42-security-rest-solution/src/test/java/accounts/client/AccountClientTests.java
+/home/noji/Repository/spring-academy/lab/42-security-rest-solution/src/test/java/accounts/web/AccountControllerCustomUserDetailsServiceTests.java
+/home/noji/Repository/spring-academy/lab/42-security-rest-solution/src/test/java/accounts/web/AccountControllerCustomAuthenticationProviderTests.java
+/home/noji/Repository/spring-academy/lab/42-security-rest-solution/src/test/java/accounts/services/AccountServiceMethodSecurityTest.java
