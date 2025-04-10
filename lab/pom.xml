@@ -194,6 +194,7 @@
         <!-- Section: Spring Boot -->
 
         <!-- Day 3 -->
+        <module>30-jdbc-boot</module>
         <module>30-jdbc-boot-solution</module>
         <module>32-jdbc-autoconfig</module>
         <module>32-jdbc-autoconfig-solution</module>
