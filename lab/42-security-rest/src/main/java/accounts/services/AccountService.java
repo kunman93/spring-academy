@@ -1,6 +1,8 @@
 package accounts.services;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
@@ -10,37 +12,38 @@ import java.util.stream.Collectors;
 @Service
 public class AccountService {
 
-    // TODO-09: Add method security annotation to a method
-    // - Uncomment and complete PreAuthorize annotation below
-    //   so that the method is permitted to be invoked only
-    //   when both of following two run-time conditions are met:
-    //   (Use SpEL to specify these conditions.)
-    //
-    //   (a) the logged-in user belongs to "ADMIN" role
-    //   (b) the value of the "username" argument matches
-    //       the value of the logged-in principal's
-    //       username, which can be accessed as
-    //       principal.username or authentication.name.
-    //
-    //@PreAuthorize(/* Add code here */)
+    /* Here we are implementing method security.
+     * For this to work, the @Configuration class `RestSecurityConfig` has to be annotated with `@EnableMethodSecurity`
+     *
+     * - Re-run this application
+     * - Using Chrome Incognito browser, access
+     *   http://localhost:8080/authorities?username=user
+     * - Enter "user"/"user" and verify that 403 failure occurs
+     * - If you want to use "curl", use
+     *   curl -i -u user:user http://localhost:8080/authorities?username=user
+     *
+     * - Close the Chrome Incognito browser and start a new one
+     * - Access http://localhost:8080/authorities?username=admin
+     * - Enter "admin"/"admin" and verify that the roles are displayed successfully
+     * - If you want to use "curl", use
+     *   curl -i -u admin:admin http://localhost:8080/authorities?username=admin
+     *
+     * - Close the Chrome Incognito browser and start a new one
+     * - Access http://localhost:8080/authorities?username=superadmin
+     * - Enter "superadmin"/"superadmin" and verify that the roles are displayed successfully
+     * - If you want to use "curl", use
+     *   curl -i - u superadmin: superadmin http://localhost:8080/authorities?username=superadmin
+     */
+    @PreAuthorize("hasRole('ADMIN') && #username == principal.username")
     public List<String> getAuthoritiesForUser(String username) {
-
-        // TODO-08: Retrieve authorities (roles) for the logged-in user
-        // (This is probably not a typical business logic you will
-        //  have in a service layer. This is mainly to show
-        //  how SecurityContext object is maintained in the local
-        //  thread, which can be accessed via SecurityContextHolder)
-        // - Replace null below with proper code - use SecurityContextHolder
-        // - Restart the application (or let Spring Boot Devtools to restart the app)
-        // - Using Chrome Incognito browser or "curl", access
-        //   http://localhost:8080/authorities?username=<username>
-        // - Verify that roles of the logged-in user get displayed
-        Collection<? extends GrantedAuthority> grantedAuthorities
-                = null; // Modify this line
+        Collection<? extends GrantedAuthority> grantedAuthorities = SecurityContextHolder
+            .getContext()
+            .getAuthentication()
+            .getAuthorities();
 
         return grantedAuthorities.stream()
-                                 .map(GrantedAuthority::getAuthority)
-                                 .collect(Collectors.toList());
+            .map(GrantedAuthority::getAuthority)
+            .collect(Collectors.toList());
     }
 
 }
