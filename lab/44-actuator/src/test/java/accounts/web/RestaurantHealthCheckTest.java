@@ -1,7 +1,6 @@
 package accounts.web;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.actuate.health.Health;
 import org.springframework.boot.actuate.health.Status;
@@ -16,47 +15,38 @@ import static org.mockito.Mockito.*;
  * Code will not compile until the next step.
  */
 public class RestaurantHealthCheckTest {
-	private RestaurantHealthCheck restaurantHealthCheck;
-	private RestaurantRepository restaurantRepository;
+    private RestaurantHealthCheck restaurantHealthCheck;
+    private RestaurantRepository restaurantRepository;
 
-	@BeforeEach
-	public void setUp() {
-		restaurantRepository = mock(JpaRestaurantRepository.class);
+    @BeforeEach
+    public void setUp() {
+        restaurantRepository = mock(JpaRestaurantRepository.class);
+        restaurantHealthCheck = new RestaurantHealthCheck(restaurantRepository);
+    }
 
-		// TODO-16b: Test custom health indicator
-		// - Create an instance of RestaurantHealthCheck class
-		// - Remove the two @Disabled annotations below
-		// - Run the test, make sure it passes.
-		restaurantHealthCheck = null;
-	}
+    @Test
+    public void testHealthReturnsUpIfThereAreRestaurants() {
+        // Mock the Repository so getRestaurantCount returns 1
+        doReturn(1L).when(restaurantRepository).getRestaurantCount();
 
-	@Test
-	@Disabled
-	public void testHealthReturnsUpIfThereAreRestaurants() {
-		// Mock the Repository so getRestaurantCount returns 1
-		doReturn(1L).when(restaurantRepository).getRestaurantCount();
+        // act
+        Health result = restaurantHealthCheck.health();
 
-		// TODO-15a: Invoke the health() method on RestaurantHealthCheck object
-		// (You will write health() method in the next step)
-		Health result = null;
+        // Health check should return UP
+        verify(restaurantRepository).getRestaurantCount();
+        assert (result.getStatus()).equals(Status.UP);
+    }
 
-		// Health check should return UP
-		verify(restaurantRepository).getRestaurantCount();
-		assert (result.getStatus()).equals(Status.UP);
-	}
+    @Test
+    public void testHealthReturnsDownIfThereAreNoRestaurants() {
+        // Mock the Repository so getRestaurantCount returns 0
+        doReturn(0L).when(restaurantRepository).getRestaurantCount();
 
-	@Test
-	@Disabled
-	public void testHealthReturnsDownIfThereAreNoRestaurants() {
-		// Mock the Repository so getRestaurantCount returns 0
-		doReturn(0L).when(restaurantRepository).getRestaurantCount();
+        // act
+        Health result = restaurantHealthCheck.health();
 
-		// TODO-15b: Invoke the health() method on RestaurantHealthCheck object
-		// (You will write health() method in the next step)
-		Health result = null;
-
-		// Health check should return DOWN
-		verify(restaurantRepository).getRestaurantCount();
-		assert (result.getStatus()).equals(Status.DOWN);
-	}
+        // Health check should return DOWN
+        verify(restaurantRepository).getRestaurantCount();
+        assert (result.getStatus()).equals(Status.DOWN);
+    }
 }

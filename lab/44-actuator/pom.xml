@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <artifactId>44-actuator</artifactId>
     <organization>
@@ -39,19 +40,28 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-         <!-- TO-DO-01: Note that the Actuator starter is already here for you. -->
-          <dependency>
-               <groupId>org.springframework.boot</groupId>
-               <artifactId>spring-boot-starter-actuator</artifactId>
-          </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
 
-          <!-- Automatic application restart -->
-          <dependency>
-               <groupId>org.springframework.boot</groupId>
-               <artifactId>spring-boot-devtools</artifactId>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
+        <!-- Automatic application restart -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
             <optional>true</optional>
-          </dependency>
+        </dependency>
     </dependencies>
 
     <build>
@@ -59,7 +69,16 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <!-- TO-DO-06: Add build-info goal -->
+                <executions>
+                    <execution>
+                        <!-- Spring Boot Actuator displays build-related information if a META-INF/build-info.properties file is present. The build-info goal generates such file
+                             with the coordinates of the project and the build time. It also allows you to add an arbitrary number of additional properties.
+                             Source: https://docs.spring.io/spring-boot/docs/2.0.1.RELEASE/maven-plugin/examples/build-info.html -->
+                        <goals>
+                            <goal>build-info</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
